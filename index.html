@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="myForm" novalidate>
+            <h1>Заполните форму</h1>
+            <div class="errorsInfo"></div>
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="age">Возраст:</label>
+                <input type="number" id="age" name="age" required />
+            </div>
+            <div class="gender-field">
+                <label>Пол:</label><br />
+                <label for="male">Мужской
+                    <input type="radio" name="gender" id="male" value="male" required>
+                </label>
+                <label for="female">Женский
+                    <input type="radio" name="gender" id="female" value="female" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="job">Профессия:</label>
+                <select name="job" id="job" required>
+                    <option value="doctor">Врач</option>
+                    <option value="programmer">Программист</option>
+                    <option value="teacher">Учитель</option>
+                    <option value="designer">Дизайнер</option>
+                    <option value="engineer">Инженер</option>
+                    <option value="seller">Продавец</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="text" id="password" name="password" required />
+                <div id="passwordError"></div>
+            </div>
+            <div class="consent">
+                <label for="consent">Согласие на обработку персональных данных
+                    <input type="checkbox" name="consent" value="consent" id="consent" required/>
+                </label>
+            </div>
+            <button type="submit" id="submitButton">Отправить</button>
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
