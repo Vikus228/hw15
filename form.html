@@ -8,20 +8,22 @@
 </head>
 <body>
     <div class="container">
-        <form id="myForm" novalidate>
+        <form id="myForm" name="myForm" novalidate>
             <h1>Заполните форму</h1>
-            <div class="errorsInfo"></div>
             <div class="form-group">
                 <label for="name">Имя:</label>
                 <input type="text" id="name" name="name" placeholder="name" />
+                <span class="error" id="nameError"></span>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="email" required />
+                <span class="error" id="emailError"></span>
             </div>
             <div class="form-group">
                 <label for="age">Возраст:</label>
                 <input type="number" id="age" name="age" placeholder="age" required />
+                <span id="ageError" class="error"></span>
             </div>
             <div class="gender-field">
                 <label>Пол:</label><br />
@@ -31,6 +33,7 @@
                 <label for="female">Женский
                     <input type="radio" name="gender" id="female" value="female" required>
                 </label>
+                <span id="genderError" class="error"></span>
             </div>
             <div class="form-group">
                 <label for="job">Профессия:</label>
@@ -43,18 +46,19 @@
                     <option value="seller">Продавец</option>
                     <option value="other">Другое</option>
                 </select>
+                <span id="jobError" class="error"></span>
             </div>
             <div class="form-group">
                 <label for="password">Пароль:</label>
-                <input type="text" id="password" placeholder="passord" name="password" required />
-                <div id="passwordError"></div>
+                <input type="text" id="password" placeholder="password" name="password" minlength="8" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/" required />
+                <span id="passwordError" class="error"></span>
             </div>
             <div class="consent">
-                <label for="consent">Согласие на обработку персональных данных
-                    <input type="checkbox" name="consent" value="consent" id="consent" required/>
-                </label>
+                <input type="checkbox" name="consent" value="consent" id="consent" required/>
+                <label for="consent">Согласие на обработку персональных данных</label>
+                <span id="consentError" class="error"></span>
             </div>
-            <button type="submit" id="submitButton">Отправить</button>
+            <button type="submit" name="submitBtn" id="submitBtn">Отправить</button>
         </form>
     </div>
 

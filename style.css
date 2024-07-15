@@ -1,22 +1,21 @@
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.error {
+    color: red;
+    display: none;
 }
 
 .container {
-    background-color: #fff;
+    width: 30%;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+}
+
+#myForm {
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -24,58 +23,53 @@ h1 {
     color: #333;
 }
 
-.errorsInfo {
-    color: red;
-    margin-bottom: 10px;
-}
-
-.form-group {
+.form-group, .gender-field, .consent {
     margin-bottom: 15px;
 }
 
-.form-group label {
+label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
+    color: #555;
 }
 
-.form-group input,
-.form-group select {
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
-.gender-field label {
-    display: inline-block;
-    margin-right: 10px;
+input[type="radio"] {
+    margin-right: 5px;
 }
 
-.consent label {
-    display: block;
-    margin-top: 10px;
-}
-
-#submitButton {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    color: #fff;
+#submitBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-#submitButton:hover {
+#submitBtn:hover {
     background-color: #0056b3;
 }
 
-#passwordError {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
+.consent {
+    display: flex;
+    align-items: center;
+}
+
+.consent input[type="checkbox"] {
+    margin-right: 10px;
 }
